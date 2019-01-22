@@ -34,6 +34,7 @@ public class EmployeeService {
     }
 
     public int selectCount(Employee employee){
+        System.out.println("123");
         return employeeMapper.selectCount(employee);
     };
 
