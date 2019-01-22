@@ -17,6 +17,8 @@ public class ThreeAppLoginController {
     @GetMapping("/list1")
     public String list() {
 //        return "redirect:list.html";
+
+        System.out.println("1234");
         return "list";
     }
 }
