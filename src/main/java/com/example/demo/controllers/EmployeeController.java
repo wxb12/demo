@@ -47,9 +47,8 @@ public class EmployeeController {
         dataTable.setData(employees);
         dataTable.setiTotalDisplayRecords(i);
         dataTable.setiTotalRecords(employees.size());
+        System.out.println("22222");
 
-
-        System.out.println("123");
         System.out.println("12345");
         return dataTable;
     }
