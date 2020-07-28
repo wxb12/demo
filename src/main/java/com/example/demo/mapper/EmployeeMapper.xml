@@ -35,4 +35,17 @@
         </where>
     </select>
 
+    <select id="selectA" resultType="Integer">
+        select count(*) from employee
+        where company_name = #{employee.companyName} and company_code = #{companyCode}
+    </select>
+
+    <select id="queryCurrTime" resultType="java.lang.String">
+		select now() currTime
+	</select>
+
+    <select id="query" resultType="String">
+        select date_sub(DATE_FORMAT(#{date},'%Y-%m-%d'), INTERVAL -1 DAY);
+--         select STR_TO_DATE('2019-04-26 16:47:31.0','%Y-%m-%d');
+    </select>
 </mapper>

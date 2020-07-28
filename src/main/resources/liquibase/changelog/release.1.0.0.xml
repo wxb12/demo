@@ -34,4 +34,28 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="20190228.add.table.task" author="wangxinbiao">
+        <createTable tableName="task">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}" remarks="主键ID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="bean_name" type="varchar(100)">
+            </column>
+            <column name="method" type="varchar(100)">
+            </column>
+            <column name="last_time" type="datetime">
+            </column>
+            <column name="start_time" type="datetime">
+            </column>
+            <column name="rule" type="varchar(100)">
+            </column>
+            <column name="companyid" type="varchar(36)">
+            </column>
+            <column name="is_active" type="boolean">
+            </column>
+            <column name="remark" type="varchar(200)">
+            </column>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog>

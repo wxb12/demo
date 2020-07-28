@@ -30,13 +30,22 @@ public class EmployeeService {
     }
 
     public List<Employee> selectAll(Page page){
-        System.out.println("123");
         return employeeMapper.selectAll(page);
     }
 
     public int selectCount(Employee employee){
-        System.out.println("123");
         return employeeMapper.selectCount(employee);
-    };
+    }
 
+    public int selectA(Employee employee,String companyCode){
+        return employeeMapper.selectA(employee,companyCode);
+    }
+
+    public String queryCurrTime(){
+        return employeeMapper.queryCurrTime();
+    }
+
+    public String query(String date){
+        return employeeMapper.query(date);
+    }
 }

@@ -4,6 +4,8 @@
 <head>
     <title>凭证导出</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--<link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon"/>-->
+    <link rel="shortcut icon" th:href="@{/public/favicon.jpg}" type="image/x-icon"/>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <!--<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
     <!-- Custom Fonts -->
@@ -30,11 +32,6 @@
                                 <th>操作时间</th>
                                 <th>节点名称</th>
                                 <th>节点状态</th>
-                                <!--<th>费用归属部门</th>-->
-                                <!--<th>归属部门编号</th>-->
-                                <!--<th>事业部OU</th>-->
-                                <!--<th>节点耗时（分钟）</th>-->
-                                <!--<th>节点耗时（小时）</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -72,9 +69,6 @@
                                     <th>操作时间</th>
                                     <th>节点名称</th>
                                     <th>节点状态</th>
-                                    <!--<th>费用归属部门</th>-->
-                                    <!--<th>归属部门编号</th>-->
-                                    <!--<th>事业部OU</th>-->
                                     <th>节点耗时（分钟）</th>
                                     <th>节点耗时（小时）</th>
                                 </tr>
@@ -94,13 +88,8 @@
 <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.js"></script>
 <script src="https://cdn.bootcss.com/datatables/1.10.15/js/dataTables.bootstrap.js"></script>
 <!--<script type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>-->
-<!--<script type="text/javascript" th:src="@{/vendor/datatables/js/jquery.dataTables.min.js}"></script>-->
-<!--<script type="text/javascript" th:src="@{/vendor/bootstrap/js/bootstrap.js}"></script>-->
-<!--<script type="text/javascript" th:src="@{/vendor/datatables-responsive/dataTables.responsive.js}"></script>-->
-<!--<script type="text/javascript" th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>-->
 <script>
     $(document).ready(function () {
-
         $('#data_mapping_table').DataTable({
             "responsive": true,
             "processing": true,
@@ -154,7 +143,6 @@
                 } //多语言配置
             }
         });
-
     });
     $('#search').click(function(){
         $('#data_mapping_table').DataTable().ajax.reload();
@@ -162,7 +150,6 @@
 </script>
 
 <script>
-
 
     function editMapping(id) {
         $("#create_account_modal").modal("show");

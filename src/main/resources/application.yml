@@ -1,15 +1,13 @@
 server:
   port: 8888
 
-#book.name : SpringCloud
-#book.author : ZhaiYongChao
-#desc : ${book.author} is writing 《${book.name}》
-
 spring:
   thymeleaf:
     prefix: classpath:/templates/
     cache: false
     suffix: .html
+#  mvc:
+#    static-path-pattern: /**
   profiles:
     active: stage
   datasource:
@@ -22,12 +20,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-#spring:
-#  mvc:
-#    view:
-#      prefix: /WEB-INF/view/
-#      suffix: .html
+  redis:
+      host: localhost
+      port: 6379
+      cache_name: XiChuanRedis
 
 mybatis:
   type-aliases-package: com.example.demo.domain
@@ -35,3 +31,6 @@ mybatis:
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
+
+testName:
+  applicationName: testRedis
